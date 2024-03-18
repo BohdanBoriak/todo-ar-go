@@ -32,7 +32,7 @@ func getDbConnection(c config.Config) db.Session {
 	}
 	sess, err := postgresql.Open(settings)
 	if err != nil {
-		log.Fatalf("Couldn't establish db connection: %s", &err)
+		log.Fatalf("Couldn't establish db connection: %s", err)
 	}
 	return sess
 }
